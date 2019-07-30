@@ -24,7 +24,7 @@ libtool -no_warning_for_no_symbols $LIBTOOL_FLAGS -o $FWNAME.framework/$FWNAME l
 cp -r include/$FWNAME/* $FWNAME.framework/Headers/
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-cp $DIR/"OpenSSL-for-iOS/OpenSSL-for-iOS-Info.plist" $FWNAME.framework/Info.plist
+cp $DIR/"OpenSSL-for-iOS/OpenSSL-for-iOS-Info.plist" $FWNAME.framework/GM-Info.plist
 echo "Created $FWNAME.framework"
 
 check_bitcode=`otool -arch arm64 -l $FWNAME.framework/$FWNAME | grep __bitcode`
