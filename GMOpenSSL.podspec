@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'GMOpenSSL'
-  s.version          = '1.1.1z'
-  s.summary          = '编译 OpenSSL 为 framework，版本和 OpenSSL 相同。'
+  s.version          = '2.0.1'
+  s.summary          = '编译 OpenSSL 为 framework，版本对应 OpenSSL 1.1.1c。'
 
   s.description      = <<-DESC
 通过 cocoapods 集成 OpenSSL，编译为 framework，方便使用。
