@@ -1,11 +1,10 @@
 # GMOpenSSL
 
-[![CI Status](https://img.shields.io/travis/lifei/GMOpenSSL.svg?style=flat)](https://travis-ci.org/lifei/GMOpenSSL)
 [![Version](https://img.shields.io/cocoapods/v/GMOpenSSL.svg?style=flat)](https://cocoapods.org/pods/GMOpenSSL)
 [![License](https://img.shields.io/cocoapods/l/GMOpenSSL.svg?style=flat)](https://cocoapods.org/pods/GMOpenSSL)
 [![Platform](https://img.shields.io/cocoapods/p/GMOpenSSL.svg?style=flat)](https://cocoapods.org/pods/GMOpenSSL)
 
-cocoapods 不直接支持集成 OpenSSL，将 OpenSSL 源码编译为 framework，方便通过 cocoapods 集成，目前版本为 OpenSSL 1.1.1c。
+cocoapods 不支持直接集成 OpenSSL，将 OpenSSL 1.1.1c 源码编译为 framework，并发布至 cocoapods，名称为 GMOpenSSL，方便通过 cocoapods 集成。
 
 ## CocoaPods
 
