@@ -4,7 +4,7 @@
 #  for iPhoneOS and iPhoneSimulator
 #
 #  Created by Felix Schulze on 16.12.10.
-#  Copyright 2010-2017 Felix Schulze. All rights reserved.
+#  Copyright 2010-2019 Felix Schulze. All rights reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -27,13 +27,13 @@ set -u
 # Default version in case no version is specified
 DEFAULTVERSION="1.1.1g"
 
-# Default (=full) set of architectures (OpenSSL <= 1.0.2) or targets (OpenSSL >= 1.1.0) to build
-DEFAULTARCHS="x86_64 i386 arm64"
-DEFAULTTARGETS="ios-sim-cross-x86_64 ios-sim-cross-i386 ios64-cross-arm64"
+# Default (=full) set of targets to build
+DEFAULTTARGETS="ios-sim-cross-x86_64 ios64-cross-arm64 ios64-cross-arm64e"  # mac-catalyst-x86_64 is a valid target that is not in the DEFAULTTARGETS because it's incompatible with "ios-sim-cross-x86_64"
 
 # Minimum iOS/tvOS SDK version to build for
 IOS_MIN_SDK_VERSION="8.0"
-TVOS_MIN_SDK_VERSION="9.0"
+TVOS_MIN_SDK_VERSION="12.0"
+MACOSX_MIN_SDK_VERSION="10.15"
 
 # Init optional env variables (use available variable or default to empty string)
 CURL_OPTIONS="${CURL_OPTIONS:-}"
@@ -48,21 +48,16 @@ echo_help()
   echo "     --ec-nistp-64-gcc-128         Enable configure option enable-ec_nistp_64_gcc_128 for 64 bit builds"
   echo " -h, --help                        Print help (this message)"
   echo "     --ios-sdk=SDKVERSION          Override iOS SDK version"
+  echo "     --macosx-sdk=SDKVERSION       Override MacOSX SDK version"
   echo "     --noparallel                  Disable running make with parallel jobs (make -j)"
   echo "     --tvos-sdk=SDKVERSION         Override tvOS SDK version"
   echo "     --disable-bitcode             Disable embedding Bitcode"
   echo " -v, --verbose                     Enable verbose logging"
   echo "     --verbose-on-error            Dump last 500 lines from log file if an error occurs (for Travis builds)"
   echo "     --version=VERSION             OpenSSL version to build (defaults to ${DEFAULTVERSION})"
-  echo
-  echo "Options for OpenSSL 1.0.2 and lower ONLY"
-  echo "     --archs=\"ARCH ARCH ...\"       Space-separated list of architectures to build"
-  echo "                                     Options: ${DEFAULTARCHS}"
-  echo
-  echo "Options for OpenSSL 1.1.0 and higher ONLY"
   echo "     --deprecated                  Exclude no-deprecated configure option and build with deprecated methods"
   echo "     --targets=\"TARGET TARGET ...\" Space-separated list of build targets"
-  echo "                                     Options: ${DEFAULTTARGETS}"
+  echo "                                     Options: ${DEFAULTTARGETS} mac-catalyst-x86_64"
   echo
   echo "For custom configure options, set variable CONFIG_OPTIONS"
   echo "For custom cURL options, set variable CURL_OPTIONS"
@@ -133,9 +128,9 @@ run_configure()
   echo "  Configure..."
   set +e
   if [ "${LOG_VERBOSE}" == "verbose" ]; then
-    ./Configure ${LOCAL_CONFIG_OPTIONS} | tee "${LOG}"
+    ./Configure ${LOCAL_CONFIG_OPTIONS} no-tests | tee "${LOG}"
   else
-    (./Configure ${LOCAL_CONFIG_OPTIONS} > "${LOG}" 2>&1) & spinner
+    (./Configure ${LOCAL_CONFIG_OPTIONS} no-tests > "${LOG}" 2>&1) & spinner
   fi
 
   # Check for error status
@@ -171,7 +166,11 @@ finish_build_loop()
   else
     LIBSSL_IOS+=("${TARGETDIR}/lib/libssl.a")
     LIBCRYPTO_IOS+=("${TARGETDIR}/lib/libcrypto.a")
-    OPENSSLCONF_SUFFIX="ios_${ARCH}"
+    if [[ "${PLATFORM}" != MacOSX* ]]; then
+      OPENSSLCONF_SUFFIX="ios_${ARCH}"
+    else
+      OPENSSLCONF_SUFFIX="catalyst_${ARCH}"
+    fi
   fi
 
   # Copy opensslconf.h to bin directory and add to array
@@ -193,6 +192,7 @@ CONFIG_ENABLE_EC_NISTP_64_GCC_128=""
 CONFIG_DISABLE_BITCODE=""
 CONFIG_NO_DEPRECATED=""
 IOS_SDKVERSION=""
+MACOSX_SDKVERSION=""
 LOG_VERBOSE=""
 PARALLEL=""
 TARGETS=""
@@ -231,6 +231,10 @@ case $i in
     IOS_SDKVERSION="${i#*=}"
     shift
     ;;
+  --macosx-sdk=*)
+    MACOSX_SDKVERSION="${i#*=}"
+    shift
+    ;;
   --noparallel)
     PARALLEL="false"
     ;;
@@ -265,14 +269,14 @@ if [[ -n "${VERSION}" && -n "${BRANCH}" ]]; then
 
 # Specific version: Verify version number format. Expected: dot notation
 elif [[ -n "${VERSION}" && ! "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+[a-z]*$ ]]; then
-  echo "Unknown version number format. Examples: 1.0.2, 1.0.2h"
+  echo "Unknown version number format. Examples: 1.1.0, 1.1.0l"
   exit 1
 
 # Specific branch
 elif [ -n "${BRANCH}" ]; then
   # Verify version number format. Expected: dot notation
   if [[ ! "${BRANCH}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-    echo "Unknown branch version number format. Examples: 1.0.2, 1.1.0"
+    echo "Unknown branch version number format. Examples: 1.1.0, 1.2.0"
     exit 1
 
   # Valid version number, determine latest version
@@ -294,41 +298,24 @@ elif [ -z "${VERSION}" ]; then
   VERSION="${DEFAULTVERSION}"
 fi
 
-# Build type:
-# In short, type "archs" is used for OpenSSL versions in the 1.0 branch and type "targets" for later versions.
-#
-# Significant changes to the build process were introduced with OpenSSL 1.1.0. As a result, this script was updated
-# to include two separate build loops for versions <= 1.0 and versions >= 1.1. The type "archs" matches the key variable
-# used to determine for which platforms to build for the 1.0 branch. Since 1.1, all platforms are defined in a separate/
-# custom configuration file as build targets. Therefore the key variable and type are called targets for 1.1 (and later).
+BUILD_TYPE="targets"
 
-# OpenSSL branches <= 1.0
-if [[ "${VERSION}" =~ ^(0\.9|1\.0) ]]; then
-  BUILD_TYPE="archs"
+# Set default for TARGETS if not specified
+if [ ! -n "${TARGETS}" ]; then
+  TARGETS="${DEFAULTTARGETS}"
+fi
 
-  # Set default for ARCHS if not specified
-  if [ ! -n "${ARCHS}" ]; then
-    ARCHS="${DEFAULTARCHS}"
-  fi
-
-# OpenSSL branches >= 1.1
-else
-  BUILD_TYPE="targets"
-
-  # Set default for TARGETS if not specified
-  if [ ! -n "${TARGETS}" ]; then
-    TARGETS="${DEFAULTTARGETS}"
-  fi
-
-  # Add no-deprecated config option (if not overwritten)
-  if [ "${CONFIG_NO_DEPRECATED}" != "false" ]; then
-    CONFIG_OPTIONS="${CONFIG_OPTIONS} no-deprecated"
-  fi
+# Add no-deprecated config option (if not overwritten)
+if [ "${CONFIG_NO_DEPRECATED}" != "false" ]; then
+  CONFIG_OPTIONS="${CONFIG_OPTIONS} no-deprecated"
 fi
 
 # Determine SDK versions
 if [ ! -n "${IOS_SDKVERSION}" ]; then
   IOS_SDKVERSION=$(xcrun -sdk iphoneos --show-sdk-version)
+fi
+if [ ! -n "${MACOSX_SDKVERSION}" ]; then
+  MACOSX_SDKVERSION=$(xcrun -sdk macosx --show-sdk-version)
 fi
 if [ ! -n "${TVOS_SDKVERSION}" ]; then
   TVOS_SDKVERSION=$(xcrun -sdk appletvos --show-sdk-version)
@@ -375,11 +362,7 @@ esac
 echo
 echo "Build options"
 echo "  OpenSSL version: ${VERSION}"
-if [ "${BUILD_TYPE}" == "archs" ]; then
-  echo "  Architectures: ${ARCHS}"
-else
-  echo "  Targets: ${TARGETS}"
-fi
+echo "  Targets: ${TARGETS}"
 echo "  iOS SDK: ${IOS_SDKVERSION}"
 echo "  tvOS SDK: ${TVOS_SDKVERSION}"
 if [ "${CONFIG_DISABLE_BITCODE}" == "true" ]; then
@@ -463,18 +446,17 @@ LIBCRYPTO_IOS=()
 LIBSSL_TVOS=()
 LIBCRYPTO_TVOS=()
 
-# Run relevant build loop (archs = 1.0 style, targets = 1.1 style)
-if [ "${BUILD_TYPE}" == "archs" ]; then
-  source "${SCRIPTDIR}/scripts/build-loop-archs.sh"
-else
-  source "${SCRIPTDIR}/scripts/build-loop-targets.sh"
-fi
+# Run relevant build loop
+source "${SCRIPTDIR}/scripts/build-loop-targets.sh"
 
 # Build iOS library if selected for build
 if [ ${#LIBSSL_IOS[@]} -gt 0 ]; then
   echo "Build library for iOS..."
   lipo -create ${LIBSSL_IOS[@]} -output "${CURRENTPATH}/lib/libssl.a"
   lipo -create ${LIBCRYPTO_IOS[@]} -output "${CURRENTPATH}/lib/libcrypto.a"
+  echo "\n=====>iOS SSL and Crypto lib files:"
+  echo "${CURRENTPATH}/lib/libssl.a"
+  echo "${CURRENTPATH}/lib/libcrypto.a"
 fi
 
 # Build tvOS library if selected for build
@@ -482,10 +464,16 @@ if [ ${#LIBSSL_TVOS[@]} -gt 0 ]; then
   echo "Build library for tvOS..."
   lipo -create ${LIBSSL_TVOS[@]} -output "${CURRENTPATH}/lib/libssl-tvOS.a"
   lipo -create ${LIBCRYPTO_TVOS[@]} -output "${CURRENTPATH}/lib/libcrypto-tvOS.a"
+  echo "\n=====>tvOS SSL and Crypto lib files:"
+  echo "${CURRENTPATH}/lib/libssl-tvOS.a"
+  echo "${CURRENTPATH}/lib/libcrypto-tvOS.a"
 fi
 
 # Copy include directory
 cp -R "${INCLUDE_DIR}" "${CURRENTPATH}/include/"
+
+echo "\n=====>Include directory:"
+echo "${CURRENTPATH}/include/"
 
 # Only create intermediate file when building for multiple targets
 # For a single target, opensslconf.h is still present in $INCLUDE_DIR (and has just been copied to the target include dir)
@@ -514,11 +502,17 @@ if [ ${#OPENSSLCONF_ALL[@]} -gt 1 ]; then
       *_ios_arm64.h)
         DEFINE_CONDITION="TARGET_OS_IOS && TARGET_OS_EMBEDDED && TARGET_CPU_ARM64"
       ;;
+      *_ios_arm64e.h)
+        DEFINE_CONDITION="TARGET_OS_IOS && TARGET_OS_EMBEDDED && TARGET_CPU_ARM64E"
+      ;;
       *_ios_armv7s.h)
         DEFINE_CONDITION="TARGET_OS_IOS && TARGET_OS_EMBEDDED && TARGET_CPU_ARM && defined(__ARM_ARCH_7S__)"
       ;;
       *_ios_armv7.h)
         DEFINE_CONDITION="TARGET_OS_IOS && TARGET_OS_EMBEDDED && TARGET_CPU_ARM && !defined(__ARM_ARCH_7S__)"
+      ;;
+      *_catalyst_x86_64.h)
+        DEFINE_CONDITION="(TARGET_OS_MACCATALYST || (TARGET_OS_IOS && TARGET_OS_SIMULATOR)) && TARGET_CPU_X86_64"
       ;;
       *_tvos_x86_64.h)
         DEFINE_CONDITION="TARGET_OS_TV && TARGET_OS_SIMULATOR && TARGET_CPU_X86_64"
