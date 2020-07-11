@@ -1,3 +1,11 @@
+#
+# Be sure to run `pod lib lint GMOpenSSL.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
+#
+
 Pod::Spec.new do |s|
   s.name             = 'GMOpenSSL'
   s.version          = '2.1.1'
@@ -15,6 +23,8 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'GMOpenSSL/openssl.framework'
   s.source_files = 'GMOpenSSL/openssl.framework/Headers/**/*{.h}'
   s.public_header_files = 'GMOpenSSL/openssl.framework/Headers/*.{h}'
+  s.frameworks = 'Foundation'
   s.vendored_frameworks = 'GMOpenSSL/openssl.framework'
 
+  
 end

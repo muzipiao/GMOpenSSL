@@ -1,0 +1,6 @@
+framework module Pods_GMOpenSSL_Tests {
+  umbrella header "Pods-GMOpenSSL_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
