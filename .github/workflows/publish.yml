@@ -1,0 +1,21 @@
+name: Publish
+
+on:
+  label:
+    types: [created]
+
+jobs:
+  build:
+    name: Setup Cocoapods based on Podfile.lock
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: setup-cocoapods
+        uses: maxim-lobanov/setup-cocoapods@v1
+        with:
+          podfile-path: Example/Podfile.lock
+      
+      - name: check-version
+        run: |
+          pod --version
