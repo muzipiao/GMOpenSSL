@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GMOpenSSL'
-  s.version          = '2.1.1'
-  s.summary          = '编译 OpenSSL 为 framework，版本对应 OpenSSL 1.1.1g。'
+  s.version          = '2.2.0'
+  s.summary          = '编译 OpenSSL 为 framework，版本对应 OpenSSL 1.1.1i。'
 
   s.description      = <<-DESC
 通过 cocoapods 集成 OpenSSL，编译为 framework，方便使用。
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   s.public_header_files = 'GMOpenSSL/openssl.framework/Headers/*.{h}'
   s.frameworks = 'Foundation'
   s.vendored_frameworks = 'GMOpenSSL/openssl.framework'
-
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
 end
