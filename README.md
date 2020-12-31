@@ -29,3 +29,14 @@ pod 'GMOpenSSL'
 如果编译的静态库不能满足需求，可以自行运行脚本编译。工程目录下有一个名称为 OpenSSL_BUILD 的文件夹，依次执行 cd 切换到当前目录下，然后执行`./build-libssl.sh`，待执行完毕再执行`./create-openssl-framework.sh`，即可看到编译完成的 openssl.framwork。
 
 打包完成的静态库并未暴露国密的头文件，解压缩下载的 openssl 压缩包，如 openssl-1.1.1i.tar.gz，将 include/crypto/ 路径下的 sm2.h、sm3.h，sm4.h 都拖到 openssl.framework/Headers 文件夹下即可。
+
+opensslconf.h 头文件条件编译末尾做如下修改
+
+```c
+# error Unable to determine target or target not included in OpenSSL build
+```
+修改为：
+
+```c
+# include <openssl/opensslconf_ios_arm64.h>
+```
