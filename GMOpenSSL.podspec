@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GMOpenSSL'
-  s.version          = '2.2.1'
+  s.version          = '2.2.2'
   s.summary          = '编译 OpenSSL 为 framework，版本对应 OpenSSL 1.1.1i。'
 
   s.description      = <<-DESC
