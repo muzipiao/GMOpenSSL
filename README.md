@@ -12,7 +12,7 @@ cocoapods 不支持直接集成 OpenSSL，将 OpenSSL 源码编译为 framework�
 |:---:|:---:|:---:|:---:|:---:|
 |2.2.0|1.1.1i|x86_64 arm64 arm64e armv7 armv7s|包含|>= iOS 8.0|
 |2.2.1|1.1.1i|arm64 arm64e|包含|>= iOS 8.0|
-|2.2.2|1.1.1i|x86_64 arm64 arm64e|包含|>= iOS 8.0|
+|2.2.3|1.1.1i|x86_64 arm64 arm64e|包含|>= iOS 8.0|
 
 ## CocoaPods
 
