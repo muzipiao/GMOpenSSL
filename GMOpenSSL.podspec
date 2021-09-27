@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lifei' => 'lifei_zdjl@126.com' }
   s.source           = { :git => 'https://github.com/muzipiao/GMOpenSSL.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.preserve_paths = 'GMOpenSSL/openssl.framework'
   s.source_files = 'GMOpenSSL/openssl.framework/Headers/**/*{.h}'
   s.public_header_files = 'GMOpenSSL/openssl.framework/Headers/*.{h}'

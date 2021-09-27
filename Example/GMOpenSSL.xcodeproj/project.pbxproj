@@ -243,9 +243,6 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = lifei;
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
-						DevelopmentTeam = 9CA5KUE8T7;
-					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -495,7 +492,7 @@
 			baseConfigurationReference = 387994DC09C03034758D1D77 /* Pods-GMOpenSSL_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9CA5KUE8T7;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMOpenSSL/GMOpenSSL-Prefix.pch";
 				INFOPLIST_FILE = "GMOpenSSL/GMOpenSSL-Info.plist";
@@ -515,7 +512,7 @@
 			baseConfigurationReference = 5372C1993945E2780F18BB78 /* Pods-GMOpenSSL_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9CA5KUE8T7;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMOpenSSL/GMOpenSSL-Prefix.pch";
 				INFOPLIST_FILE = "GMOpenSSL/GMOpenSSL-Info.plist";

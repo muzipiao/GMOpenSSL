@@ -16,7 +16,7 @@
     "tag": "2.2.5"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "preserve_paths": "GMOpenSSL/openssl.framework",
   "source_files": "GMOpenSSL/openssl.framework/Headers/**/*{.h}",
