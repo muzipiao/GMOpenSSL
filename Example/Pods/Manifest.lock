@@ -1,5 +1,5 @@
 PODS:
-  - GMOpenSSL (2.2.3)
+  - GMOpenSSL (2.2.5)
 
 DEPENDENCIES:
   - GMOpenSSL (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GMOpenSSL: 31e201eaebdf4dd876cdd95a4be9ed02686d86ce
+  GMOpenSSL: 860620c6f1c9e2f4bfbf3ce2962601cf85bd364a
 
 PODFILE CHECKSUM: 67135cd120937d9ab433aea45be6b260fe6bd0a5
 
