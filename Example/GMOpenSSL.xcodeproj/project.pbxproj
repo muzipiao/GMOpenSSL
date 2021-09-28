@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		9C09A47924BA336300883F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C09A47824BA336300883F0B /* LaunchScreen.storyboard */; };
 		9C199843270315EC005F5748 /* GMSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C199842270315EC005F5748 /* GMSwiftVC.swift */; };
+		9C19984A27031B79005F5748 /* GMOpenSSL in Frameworks */ = {isa = PBXBuildFile; productRef = 9C19984927031B79005F5748 /* GMOpenSSL */; };
 		C98632AED5474A460CC7BA62 /* Pods_GMOpenSSL_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30726472BEB6B6911AD71A04 /* Pods_GMOpenSSL_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				9C19984A27031B79005F5748 /* GMOpenSSL in Frameworks */,
 				4DF4133D61902B2F66E736C8 /* Pods_GMOpenSSL_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +218,7 @@
 			);
 			name = GMOpenSSL_Example;
 			packageProductDependencies = (
+				9C19984927031B79005F5748 /* GMOpenSSL */,
 			);
 			productName = GMOpenSSL;
 			productReference = 6003F58A195388D20070C39A /* GMOpenSSL_Example.app */;
@@ -268,6 +271,9 @@
 				Base,
 			);
 			mainGroup = 6003F581195388D10070C39A;
+			packageReferences = (
+				9C19984827031B79005F5748 /* XCRemoteSwiftPackageReference "GMOpenSSL" */,
+			);
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -512,7 +518,10 @@
 				GCC_PREFIX_HEADER = "GMOpenSSL/GMOpenSSL-Prefix.pch";
 				INFOPLIST_FILE = "GMOpenSSL/GMOpenSSL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
@@ -536,7 +545,10 @@
 				GCC_PREFIX_HEADER = "GMOpenSSL/GMOpenSSL-Prefix.pch";
 				INFOPLIST_FILE = "GMOpenSSL/GMOpenSSL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
@@ -627,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C19984827031B79005F5748 /* XCRemoteSwiftPackageReference "GMOpenSSL" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/muzipiao/GMOpenSSL.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C19984927031B79005F5748 /* GMOpenSSL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C19984827031B79005F5748 /* XCRemoteSwiftPackageReference "GMOpenSSL" */;
+			productName = GMOpenSSL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6003F582195388D10070C39A /* Project object */;
 }
