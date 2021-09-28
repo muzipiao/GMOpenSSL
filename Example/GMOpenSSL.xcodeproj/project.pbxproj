@@ -22,6 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		9C09A47924BA336300883F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C09A47824BA336300883F0B /* LaunchScreen.storyboard */; };
+		9C199843270315EC005F5748 /* GMSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C199842270315EC005F5748 /* GMSwiftVC.swift */; };
 		C98632AED5474A460CC7BA62 /* Pods_GMOpenSSL_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30726472BEB6B6911AD71A04 /* Pods_GMOpenSSL_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		69718AC494CAAA8F044F700F /* Pods-GMOpenSSL_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMOpenSSL_Tests.release.xcconfig"; path = "Target Support Files/Pods-GMOpenSSL_Tests/Pods-GMOpenSSL_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		744BB0927D9B8B204C056B9E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9C09A47824BA336300883F0B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C199841270315EB005F5748 /* GMOpenSSL_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GMOpenSSL_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		9C199842270315EC005F5748 /* GMSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMSwiftVC.swift; sourceTree = "<group>"; };
 		FF85233A4CAC90DACC5E6E4B /* Pods_GMOpenSSL_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GMOpenSSL_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,9 +137,11 @@
 				6003F59D195388D20070C39A /* GMAppDelegate.m */,
 				6003F5A5195388D20070C39A /* GMViewController.h */,
 				6003F5A6195388D20070C39A /* GMViewController.m */,
+				9C199842270315EC005F5748 /* GMSwiftVC.swift */,
 				9C09A47824BA336300883F0B /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				9C199841270315EB005F5748 /* GMOpenSSL_Example-Bridging-Header.h */,
 			);
 			name = "Example for GMOpenSSL";
 			path = GMOpenSSL;
@@ -210,6 +215,8 @@
 			dependencies = (
 			);
 			name = GMOpenSSL_Example;
+			packageProductDependencies = (
+			);
 			productName = GMOpenSSL;
 			productReference = 6003F58A195388D20070C39A /* GMOpenSSL_Example.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +250,10 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = lifei;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 9CA5KUE8T7;
+						LastSwiftMigration = 1300;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -340,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C199843270315EC005F5748 /* GMSwiftVC.swift in Sources */,
 				6003F59E195388D20070C39A /* GMAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* GMViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -435,6 +447,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -482,6 +495,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -492,16 +506,20 @@
 			baseConfigurationReference = 387994DC09C03034758D1D77 /* Pods-GMOpenSSL_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 9CA5KUE8T7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMOpenSSL/GMOpenSSL-Prefix.pch";
 				INFOPLIST_FILE = "GMOpenSSL/GMOpenSSL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lf.gmopenssl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "GMOpenSSL/GMOpenSSL_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "arm64 arm64e";
 				WRAPPER_EXTENSION = app;
 			};
@@ -512,16 +530,19 @@
 			baseConfigurationReference = 5372C1993945E2780F18BB78 /* Pods-GMOpenSSL_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 9CA5KUE8T7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMOpenSSL/GMOpenSSL-Prefix.pch";
 				INFOPLIST_FILE = "GMOpenSSL/GMOpenSSL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lf.gmopenssl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "GMOpenSSL/GMOpenSSL_Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "arm64 arm64e";
 				WRAPPER_EXTENSION = app;
 			};
@@ -531,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18F5C10E6E5E01808C3420AB /* Pods-GMOpenSSL_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -546,7 +568,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GMOpenSSL_Example.app/GMOpenSSL_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -556,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69718AC494CAAA8F044F700F /* Pods-GMOpenSSL_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -567,7 +590,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GMOpenSSL_Example.app/GMOpenSSL_Example";
 				WRAPPER_EXTENSION = xctest;
 			};

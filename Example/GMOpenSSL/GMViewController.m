@@ -10,6 +10,7 @@
 #include <openssl/md5.h>
 #include <openssl/sha.h>
 #import <openssl/evp.h>
+#import "GMOpenSSL_Example-Swift.h"
 
 @interface GMViewController ()
 
@@ -114,6 +115,11 @@
 
     BIO_free_all(mem);
     return base64String;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    GMSwiftVC *gmVC = [[GMSwiftVC alloc] init];
+    [self presentViewController:gmVC animated:YES completion:nil];
 }
 
 
