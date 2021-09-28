@@ -61,7 +61,16 @@ do
     echo "Creating $framework_path"
     mkdir -p "$framework_path/Headers"
     libtool -no_warning_for_no_symbols -static -o "${framework_path}/openssl" "bin/${TARGET_FOLDER}/lib/libcrypto.a" "bin/${TARGET_FOLDER}/lib/libssl.a"
-    cp -r bin/"${TARGET_FOLDER}"/include/openssl/* "$framework_path"/Headers/
+    cp -r bin/"${TARGET_FOLDER}"/include/openssl/* "${framework_path}"/Headers/
+    # 添加 modulemap
+    mkdir -p "$framework_path/Modules"
+    cp Modules/module.modulemap "${framework_path}/Modules/"
+    # 生成 openssl.h
+    for h_path in bin/"${TARGET_FOLDER}"/include/openssl/*.h
+    do
+        h_name=$(basename "${h_path}")
+        echo "#include <openssl/${h_name}>" >> "${framework_path}"/Headers/openssl.h
+    done
 done
 
 # 编译为 xcframework

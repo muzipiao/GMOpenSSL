@@ -1,5 +1,0 @@
-framework module GMOpenSSL {
-    umbrella header "Headers/*.h"
-    export *
-    module * { export * }
-}
