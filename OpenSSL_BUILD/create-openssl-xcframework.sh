@@ -50,6 +50,14 @@ do
     fi
 done
 
+# fix inttypes.h
+find "${SCRIPT_DIR}/../iphoneos/include/openssl" -type f -name "*.h" -exec sed -i "" -e "s/include <inttypes\.h>/include <sys\/types\.h>/g" {} \;
+find "${SCRIPT_DIR}/../iphonesimulator/include/openssl" -type f -name "*.h" -exec sed -i "" -e "s/include <inttypes\.h>/include <sys\/types\.h>/g" {} \;
+
+# fix headers for Swift
+
+sed -ie "s/BIGNUM \*I,/BIGNUM \*i,/g" ${SRC_DIR}/crypto/rsa/rsa_local.h   
+
 # 编译为 framework
 for TARGET_FOLDER in $BIN_TARGET_FOLDERS
 do

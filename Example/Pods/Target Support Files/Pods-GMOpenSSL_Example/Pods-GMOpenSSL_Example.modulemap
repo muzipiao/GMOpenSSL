@@ -1,6 +1,0 @@
-framework module Pods_GMOpenSSL_Example {
-  umbrella header "Pods-GMOpenSSL_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
