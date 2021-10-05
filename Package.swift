@@ -4,13 +4,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "GMOpenSSL",
+    name: "openssl",
     platforms: [.iOS(.v9)],
     products: [
-        .library(name: "GMOpenSSL", targets: ["GMOpenSSL"]),
+        .library(name: "openssl", targets: ["openssl"]),
     ],
     dependencies: [],
     targets: [
-        .binaryTarget(name: "GMOpenSSL", path: "GMFrameworks/openssl.xcframework"),
+        .binaryTarget(name: "openssl", path: "GMFrameworks/openssl.xcframework"),
     ]
 )
