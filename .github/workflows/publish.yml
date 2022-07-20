@@ -1,11 +1,12 @@
 name: Publish
 
 on:
-  create
+  push:
+    branches: [master]
 
 jobs:
   build:
-    name: Setup Cocoapods based on Podfile.lock
+    name: Setup Cocoapods based on provided version
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -13,7 +14,7 @@ jobs:
       - name: setup-cocoapods
         uses: maxim-lobanov/setup-cocoapods@v1
         with:
-          podfile-path: Example/Podfile.lock
+          podfile-path: Podfile.lock
       
       - name: verify-spec
         run: |

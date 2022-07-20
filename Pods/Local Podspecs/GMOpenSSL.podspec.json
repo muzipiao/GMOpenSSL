@@ -1,7 +1,7 @@
 {
   "name": "GMOpenSSL",
-  "version": "2.2.6",
-  "summary": "编译 OpenSSL 为 framework，版本对应 OpenSSL 1.1.1l。",
+  "version": "2.2.7",
+  "summary": "编译 OpenSSL 为 framework，版本对应 OpenSSL 1.1.1q。",
   "description": "通过 cocoapods 集成 OpenSSL，编译为 framework，方便使用。",
   "homepage": "https://github.com/muzipiao/GMOpenSSL",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/muzipiao/GMOpenSSL.git",
-    "tag": "2.2.6"
+    "tag": "2.2.7"
   },
   "platforms": {
     "ios": "9.0"
