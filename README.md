@@ -10,7 +10,7 @@ cocoapods 不支持直接集成 OpenSSL，将 OpenSSL 源码编译为 framework�
 
 |GMOpenSSL 版本|OpenSSL 版本|支持架构|Bitcode|兼容iOS版本|
 |:---:|:---:|:---:|:---:|:---:|
-|2.2.7|1.1.1q|x86_64 arm64|包含|>= iOS 9.0|
+|2.2.9|1.1.1q|x86_64 arm64|包含|>= iOS 9.0|
 |2.2.4|1.1.1l|x86_64 arm64 arm64e armv7 armv7s|包含|>= iOS 8.0|
 
 ## CocoaPods
