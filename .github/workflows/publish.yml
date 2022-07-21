@@ -20,4 +20,3 @@ jobs:
         run: |
           pod --version
           pod lib lint --use-libraries --allow-warnings
-          pod spec lint --use-libraries --allow-warnings
