@@ -117,6 +117,7 @@
 				9C159E2F2703ECE70023B704 /* Frameworks */,
 				9C159E302703ECE70023B704 /* Resources */,
 				9C159E602703F1670023B704 /* Embed Frameworks */,
+				023486B80B2B168415BC0901 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +173,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		023486B80B2B168415BC0901 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL (OCDemo)/Pods-GMOpenSSL (OCDemo)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL (OCDemo)/Pods-GMOpenSSL (OCDemo)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL (OCDemo)/Pods-GMOpenSSL (OCDemo)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		225A473465936A1CF867BD0B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

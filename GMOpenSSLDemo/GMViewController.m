@@ -10,6 +10,8 @@
 #include <openssl/md5.h>
 #include <openssl/sha.h>
 #import <openssl/evp.h>
+#import <openssl/sm2.h>
+#import <openssl/bn.h>
 
 @interface GMViewController ()
 
@@ -27,12 +29,16 @@
     NSString *md5 = [self md5FromString:orginStr];
     NSString *sha256 = [self sha256FromString:orginStr];
     NSString *base64 = [self base64FromString:orginStr];
+    NSArray *sm2Keys = [self generateKey];
     
     NSMutableString *mStr = [NSMutableString string];
     [mStr appendFormat:@"原始字符：%@\n", orginStr];
     [mStr appendFormat:@"MD5 值：%@\n", md5];
     [mStr appendFormat:@"SHA256 值：%@\n", sha256];
     [mStr appendFormat:@"BASE64 值：%@\n", base64];
+    
+    [mStr appendFormat:@"PUB 值：%@\n", sm2Keys[0]];
+    [mStr appendFormat:@"PRI 值：%@\n", sm2Keys[1]];
     
     self.view.backgroundColor = [UIColor whiteColor];
     UILabel *tmpLabel = [[UILabel alloc] initWithFrame:self.view.bounds];
@@ -116,6 +122,42 @@
     
     BIO_free_all(mem);
     return base64String;
+}
+
+
+//MARK: - 创建公私钥对
+- (NSArray *)generateKey{
+    NSMutableArray *mList = [NSMutableArray arrayWithCapacity:2];
+    EC_GROUP *group = EC_GROUP_new_by_curve_name(NID_sm2); // 椭圆曲线
+    EC_KEY *key = NULL; // 密钥对
+    do {
+        key = EC_KEY_new();
+        if (!EC_KEY_set_group(key, group)) {
+            break;
+        }
+        if (!EC_KEY_generate_key(key)) {
+            break;
+        }
+        const EC_POINT *pub_key = EC_KEY_get0_public_key(key);
+        const BIGNUM *pri_key = EC_KEY_get0_private_key(key);
+        
+        char *hex_pub = EC_POINT_point2hex(group, pub_key, EC_KEY_get_conv_form(key), NULL);
+        char *hex_pri = BN_bn2hex(pri_key);
+        
+        NSString *publicKey = [NSString stringWithCString:hex_pub encoding:NSUTF8StringEncoding];
+        NSString *priHex = [NSString stringWithCString:hex_pri encoding:NSUTF8StringEncoding];
+        
+        [mList addObject:publicKey];
+        [mList addObject:priHex];
+        
+        OPENSSL_free(hex_pub);
+        OPENSSL_free(hex_pri);
+    } while (NO);
+    
+    if (group != NULL) EC_GROUP_free(group);
+    EC_KEY_free(key);
+    
+    return mList.copy;
 }
 
 

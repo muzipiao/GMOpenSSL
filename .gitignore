@@ -34,7 +34,7 @@ xcuserdata/
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+Pods/
 
 # Carthage
 #
@@ -61,14 +61,3 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-
-OpenSSL_BUILD/bin
-OpenSSL_BUILD/lib
-OpenSSL_BUILD/*.gz
-OpenSSL_BUILD/OpenSSL-for-iOS.xcodeproj/xcuserdata
-OpenSSL_BUILD/src
-OpenSSL_BUILD/build
-OpenSSL_BUILD/OpenSSL-for-iOS.xcodeproj/project.xcworkspace/xcuserdata
-OpenSSL_BUILD/include/openssl
-OpenSSL_BUILD/*.framework
-OpenSSL_BUILD/*.xccheckout

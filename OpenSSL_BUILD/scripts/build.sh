@@ -21,12 +21,12 @@ export OPENSSL_LOCAL_CONFIG_DIR="${SCRIPT_DIR}/../config"
 
 DEVELOPER=$(xcode-select --print-path)
 
-export IPHONEOS_DEPLOYMENT_VERSION="7.0"
+export IPHONEOS_DEPLOYMENT_VERSION="9.0"
 IPHONEOS_SDK=$(xcrun --sdk iphoneos --show-sdk-path)
 IPHONESIMULATOR_SDK=$(xcrun --sdk iphonesimulator --show-sdk-path)
 OSX_SDK=$(xcrun --sdk macosx --show-sdk-path)
 
-export MACOSX_DEPLOYMENT_TARGET="10.10" # 
+export MACOSX_DEPLOYMENT_TARGET="10.13" #
 
 # Turn versions like 1.2.3 into numbers that can be compare by bash.
 version()

@@ -27,3 +27,9 @@ Carthage/
 Frameworks/OpenSSL.xcframework.zip
 *.tar.gz
 *.tar.gz.sha256
+
+iphoneos/lib/
+iphonesimulator/lib/
+macosx/lib/
+macosx_catalyst/lib/
+Frameworks/
