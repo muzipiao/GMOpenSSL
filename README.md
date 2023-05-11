@@ -29,7 +29,7 @@ pod 'GMOpenSSL'
 
 ### Swift Package Manager
 
-GMOpenSSL 支持 SwiftPM，在工程中使用，点击 `File` -> `Swift Packages` -> `Add Package Dependency`，输入 [GMOpenSSL 分支 URL](https://github.com/muzipiao/GMOpenSSL.git)，或者在 Xcode 中添加 GitHub 账号，搜索 `GMOpenSSL` 即可。
+GMOpenSSL 支持 SwiftPM，在工程中使用，点击 `File` -> `Swift Packages` -> `Add Package Dependency`，输入 [https://github.com/muzipiao/GMOpenSSL.git](https://github.com/muzipiao/GMOpenSSL.git)，或者在 Xcode 中添加 GitHub 账号，搜索 `GMOpenSSL` 即可。
 
 如果在组件库中使用，更新 `Package.swift` 文件：
 
