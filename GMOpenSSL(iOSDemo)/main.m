@@ -1,8 +1,8 @@
 //
 //  main.m
-//  GMOpenSSL
+//  GMOpenSSL(iOSDemo)
 //
-//  Created by lifei on 2021/9/29.
+//  Created by lifei on 2023/5/11.
 //
 
 #import <UIKit/UIKit.h>

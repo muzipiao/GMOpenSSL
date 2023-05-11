@@ -1,7 +1,14 @@
-platform :ios, '9.0'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '12.0'
 
-target 'GMOpenSSL (OCDemo)' do
-  # use_frameworks!
+target 'GMOpenSSL(iOSDemo)' do
+  use_frameworks!
+  pod 'GMOpenSSL', :path => './'
+
+end
+
+target 'GMOpenSSL(OsxDemo)' do
+  use_frameworks!
   pod 'GMOpenSSL', :path => './'
 
 end

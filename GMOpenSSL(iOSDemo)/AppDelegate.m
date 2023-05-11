@@ -1,12 +1,12 @@
 //
 //  AppDelegate.m
-//  GMOpenSSL
+//  GMOpenSSL(iOSDemo)
 //
-//  Created by lifei on 2021/9/29.
+//  Created by lifei on 2023/5/11.
 //
 
 #import "AppDelegate.h"
-#import "GMViewController.h"
+#import "GMDemoVC.h"
 
 @interface AppDelegate ()
 
@@ -16,13 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    GMViewController *mainVC = [[GMViewController alloc]init];
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    GMDemoVC *mainVC = [[GMDemoVC alloc]init];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = mainVC;
     [self.window makeKeyAndVisible];
     
     return YES;
 }
-
 
 @end

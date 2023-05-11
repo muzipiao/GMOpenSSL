@@ -7,48 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8869DDC052C1651017BC6E19 /* libPods-GMOpenSSL (OCDemo).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305183F59D414E40A070CDA /* libPods-GMOpenSSL (OCDemo).a */; };
-		9C159E372703ECE70023B704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C159E362703ECE70023B704 /* AppDelegate.m */; };
-		9C159E422703ECE80023B704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C159E412703ECE80023B704 /* Assets.xcassets */; };
-		9C159E452703ECE80023B704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C159E432703ECE80023B704 /* LaunchScreen.storyboard */; };
-		9C159E482703ECE80023B704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C159E472703ECE80023B704 /* main.m */; };
-		9C159E502703EDB90023B704 /* GMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C159E4E2703EDB90023B704 /* GMViewController.m */; };
+		82E6484F8684C24C2286F481 /* Pods_GMOpenSSL_OsxDemo_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2F7E6BC7338F2B040F312 /* Pods_GMOpenSSL_OsxDemo_.framework */; };
+		9C1A3B2C2A0C848D00A43CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A3B2B2A0C848D00A43CEA /* AppDelegate.m */; };
+		9C1A3B372A0C848E00A43CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A3B362A0C848E00A43CEA /* Assets.xcassets */; };
+		9C1A3B3A2A0C848E00A43CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A3B382A0C848E00A43CEA /* LaunchScreen.storyboard */; };
+		9C1A3B3D2A0C848E00A43CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A3B3C2A0C848E00A43CEA /* main.m */; };
+		9C1A3B492A0C84C700A43CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A3B482A0C84C700A43CEA /* AppDelegate.m */; };
+		9C1A3B4E2A0C84C800A43CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A3B4D2A0C84C800A43CEA /* Assets.xcassets */; };
+		9C1A3B512A0C84C800A43CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A3B4F2A0C84C800A43CEA /* Main.storyboard */; };
+		9C1A3B532A0C84C800A43CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A3B522A0C84C800A43CEA /* main.m */; };
+		9C1A3B5A2A0C867400A43CEA /* GMDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A3B592A0C867400A43CEA /* GMDemoVC.m */; };
+		9C3F5A802A0CB75200807875 /* GMOsxDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F5A7F2A0CB75200807875 /* GMOsxDemoVC.m */; };
+		E7A31CF7CBFD0F69D0FCFE0F /* Pods_GMOpenSSL_iOSDemo_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14EF867DC56232BC32F2854 /* Pods_GMOpenSSL_iOSDemo_.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9C159E602703F1670023B704 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		2295B188BC0FFA8517E9187C /* Pods-GMOpenSSL(iOSDemo).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMOpenSSL(iOSDemo).debug.xcconfig"; path = "Target Support Files/Pods-GMOpenSSL(iOSDemo)/Pods-GMOpenSSL(iOSDemo).debug.xcconfig"; sourceTree = "<group>"; };
 		2B488B0F93E49D05BC1291EA /* Pods-GMOpenSSL (OCDemo).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMOpenSSL (OCDemo).debug.xcconfig"; path = "Target Support Files/Pods-GMOpenSSL (OCDemo)/Pods-GMOpenSSL (OCDemo).debug.xcconfig"; sourceTree = "<group>"; };
-		5305183F59D414E40A070CDA /* libPods-GMOpenSSL (OCDemo).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GMOpenSSL (OCDemo).a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C159E322703ECE70023B704 /* GMOpenSSL (OCDemo).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GMOpenSSL (OCDemo).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C159E352703ECE70023B704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9C159E362703ECE70023B704 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9C159E412703ECE80023B704 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9C159E442703ECE80023B704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9C159E462703ECE80023B704 /* GMOpenSSLDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GMOpenSSLDemo-Info.plist"; sourceTree = "<group>"; };
-		9C159E472703ECE80023B704 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9C159E4E2703EDB90023B704 /* GMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMViewController.m; sourceTree = "<group>"; };
-		9C159E4F2703EDB90023B704 /* GMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMViewController.h; sourceTree = "<group>"; };
+		353674CC6E71AD4B6352A4D3 /* Pods_GMOpenSSL__OCDemo_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GMOpenSSL__OCDemo_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A2F7E6BC7338F2B040F312 /* Pods_GMOpenSSL_OsxDemo_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GMOpenSSL_OsxDemo_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BD3688D02F9DC377C07AB6 /* Pods-GMOpenSSL(OsxDemo).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMOpenSSL(OsxDemo).debug.xcconfig"; path = "Target Support Files/Pods-GMOpenSSL(OsxDemo)/Pods-GMOpenSSL(OsxDemo).debug.xcconfig"; sourceTree = "<group>"; };
+		7088F184578D99011986E04E /* Pods-GMOpenSSL(OsxDemo).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMOpenSSL(OsxDemo).release.xcconfig"; path = "Target Support Files/Pods-GMOpenSSL(OsxDemo)/Pods-GMOpenSSL(OsxDemo).release.xcconfig"; sourceTree = "<group>"; };
+		8760E4FE3B89B18E279403E5 /* Pods-GMOpenSSL(iOSDemo).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMOpenSSL(iOSDemo).release.xcconfig"; path = "Target Support Files/Pods-GMOpenSSL(iOSDemo)/Pods-GMOpenSSL(iOSDemo).release.xcconfig"; sourceTree = "<group>"; };
+		9C1A3B282A0C848D00A43CEA /* GMOpenSSL(iOSDemo).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GMOpenSSL(iOSDemo).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1A3B2A2A0C848D00A43CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C1A3B2B2A0C848D00A43CEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C1A3B362A0C848E00A43CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C1A3B392A0C848E00A43CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C1A3B3B2A0C848E00A43CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C1A3B3C2A0C848E00A43CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C1A3B452A0C84C700A43CEA /* GMOpenSSL(OsxDemo).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GMOpenSSL(OsxDemo).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1A3B472A0C84C700A43CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C1A3B482A0C84C700A43CEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C1A3B4D2A0C84C800A43CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C1A3B502A0C84C800A43CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C1A3B522A0C84C800A43CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C1A3B542A0C84C800A43CEA /* GMOpenSSL_OsxDemo_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GMOpenSSL_OsxDemo_.entitlements; sourceTree = "<group>"; };
+		9C1A3B582A0C867400A43CEA /* GMDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMDemoVC.h; sourceTree = "<group>"; };
+		9C1A3B592A0C867400A43CEA /* GMDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMDemoVC.m; sourceTree = "<group>"; };
+		9C3F5A7E2A0CB75200807875 /* GMOsxDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMOsxDemoVC.h; sourceTree = "<group>"; };
+		9C3F5A7F2A0CB75200807875 /* GMOsxDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMOsxDemoVC.m; sourceTree = "<group>"; };
+		E14EF867DC56232BC32F2854 /* Pods_GMOpenSSL_iOSDemo_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GMOpenSSL_iOSDemo_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E6BD4508E4D1919063B996 /* Pods-GMOpenSSL (OCDemo).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMOpenSSL (OCDemo).release.xcconfig"; path = "Target Support Files/Pods-GMOpenSSL (OCDemo)/Pods-GMOpenSSL (OCDemo).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9C159E2F2703ECE70023B704 /* Frameworks */ = {
+		9C1A3B252A0C848D00A43CEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8869DDC052C1651017BC6E19 /* libPods-GMOpenSSL (OCDemo).a in Frameworks */,
+				E7A31CF7CBFD0F69D0FCFE0F /* Pods_GMOpenSSL_iOSDemo_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C1A3B422A0C84C700A43CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E6484F8684C24C2286F481 /* Pods_GMOpenSSL_OsxDemo_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +74,8 @@
 		9C159E292703ECE70023B704 = {
 			isa = PBXGroup;
 			children = (
-				9C159E342703ECE70023B704 /* GMOpenSSLDemo */,
+				9C1A3B292A0C848D00A43CEA /* GMOpenSSL(iOSDemo) */,
+				9C1A3B462A0C84C700A43CEA /* GMOpenSSL(OsxDemo) */,
 				9C159E332703ECE70023B704 /* Products */,
 				9C31B75C27040F5C00A91245 /* Frameworks */,
 				C3D6EBDC9EA5039E2753156E /* Pods */,
@@ -68,30 +85,48 @@
 		9C159E332703ECE70023B704 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C159E322703ECE70023B704 /* GMOpenSSL (OCDemo).app */,
+				9C1A3B282A0C848D00A43CEA /* GMOpenSSL(iOSDemo).app */,
+				9C1A3B452A0C84C700A43CEA /* GMOpenSSL(OsxDemo).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C159E342703ECE70023B704 /* GMOpenSSLDemo */ = {
+		9C1A3B292A0C848D00A43CEA /* GMOpenSSL(iOSDemo) */ = {
 			isa = PBXGroup;
 			children = (
-				9C159E352703ECE70023B704 /* AppDelegate.h */,
-				9C159E362703ECE70023B704 /* AppDelegate.m */,
-				9C159E4F2703EDB90023B704 /* GMViewController.h */,
-				9C159E4E2703EDB90023B704 /* GMViewController.m */,
-				9C159E412703ECE80023B704 /* Assets.xcassets */,
-				9C159E432703ECE80023B704 /* LaunchScreen.storyboard */,
-				9C159E462703ECE80023B704 /* GMOpenSSLDemo-Info.plist */,
-				9C159E472703ECE80023B704 /* main.m */,
+				9C1A3B2A2A0C848D00A43CEA /* AppDelegate.h */,
+				9C1A3B2B2A0C848D00A43CEA /* AppDelegate.m */,
+				9C1A3B582A0C867400A43CEA /* GMDemoVC.h */,
+				9C1A3B592A0C867400A43CEA /* GMDemoVC.m */,
+				9C1A3B362A0C848E00A43CEA /* Assets.xcassets */,
+				9C1A3B382A0C848E00A43CEA /* LaunchScreen.storyboard */,
+				9C1A3B3B2A0C848E00A43CEA /* Info.plist */,
+				9C1A3B3C2A0C848E00A43CEA /* main.m */,
 			);
-			path = GMOpenSSLDemo;
+			path = "GMOpenSSL(iOSDemo)";
+			sourceTree = "<group>";
+		};
+		9C1A3B462A0C84C700A43CEA /* GMOpenSSL(OsxDemo) */ = {
+			isa = PBXGroup;
+			children = (
+				9C1A3B472A0C84C700A43CEA /* AppDelegate.h */,
+				9C1A3B482A0C84C700A43CEA /* AppDelegate.m */,
+				9C3F5A7E2A0CB75200807875 /* GMOsxDemoVC.h */,
+				9C3F5A7F2A0CB75200807875 /* GMOsxDemoVC.m */,
+				9C1A3B4D2A0C84C800A43CEA /* Assets.xcassets */,
+				9C1A3B4F2A0C84C800A43CEA /* Main.storyboard */,
+				9C1A3B522A0C84C800A43CEA /* main.m */,
+				9C1A3B542A0C84C800A43CEA /* GMOpenSSL_OsxDemo_.entitlements */,
+			);
+			path = "GMOpenSSL(OsxDemo)";
 			sourceTree = "<group>";
 		};
 		9C31B75C27040F5C00A91245 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5305183F59D414E40A070CDA /* libPods-GMOpenSSL (OCDemo).a */,
+				353674CC6E71AD4B6352A4D3 /* Pods_GMOpenSSL__OCDemo_.framework */,
+				37A2F7E6BC7338F2B040F312 /* Pods_GMOpenSSL_OsxDemo_.framework */,
+				E14EF867DC56232BC32F2854 /* Pods_GMOpenSSL_iOSDemo_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,6 +136,10 @@
 			children = (
 				2B488B0F93E49D05BC1291EA /* Pods-GMOpenSSL (OCDemo).debug.xcconfig */,
 				E7E6BD4508E4D1919063B996 /* Pods-GMOpenSSL (OCDemo).release.xcconfig */,
+				39BD3688D02F9DC377C07AB6 /* Pods-GMOpenSSL(OsxDemo).debug.xcconfig */,
+				7088F184578D99011986E04E /* Pods-GMOpenSSL(OsxDemo).release.xcconfig */,
+				2295B188BC0FFA8517E9187C /* Pods-GMOpenSSL(iOSDemo).debug.xcconfig */,
+				8760E4FE3B89B18E279403E5 /* Pods-GMOpenSSL(iOSDemo).release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -108,24 +147,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C159E312703ECE70023B704 /* GMOpenSSL (OCDemo) */ = {
+		9C1A3B272A0C848D00A43CEA /* GMOpenSSL(iOSDemo) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C159E4B2703ECE80023B704 /* Build configuration list for PBXNativeTarget "GMOpenSSL (OCDemo)" */;
+			buildConfigurationList = 9C1A3B402A0C848E00A43CEA /* Build configuration list for PBXNativeTarget "GMOpenSSL(iOSDemo)" */;
 			buildPhases = (
-				225A473465936A1CF867BD0B /* [CP] Check Pods Manifest.lock */,
-				9C159E2E2703ECE70023B704 /* Sources */,
-				9C159E2F2703ECE70023B704 /* Frameworks */,
-				9C159E302703ECE70023B704 /* Resources */,
-				9C159E602703F1670023B704 /* Embed Frameworks */,
-				023486B80B2B168415BC0901 /* [CP] Embed Pods Frameworks */,
+				8E64425E190A80B3D6D2EC25 /* [CP] Check Pods Manifest.lock */,
+				9C1A3B242A0C848D00A43CEA /* Sources */,
+				9C1A3B252A0C848D00A43CEA /* Frameworks */,
+				9C1A3B262A0C848D00A43CEA /* Resources */,
+				222182093029E6999C295F90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "GMOpenSSL (OCDemo)";
-			productName = GMOpenSSL;
-			productReference = 9C159E322703ECE70023B704 /* GMOpenSSL (OCDemo).app */;
+			name = "GMOpenSSL(iOSDemo)";
+			productName = "GMOpenSSL(iOSDemo)";
+			productReference = 9C1A3B282A0C848D00A43CEA /* GMOpenSSL(iOSDemo).app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C1A3B442A0C84C700A43CEA /* GMOpenSSL(OsxDemo) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C1A3B552A0C84C800A43CEA /* Build configuration list for PBXNativeTarget "GMOpenSSL(OsxDemo)" */;
+			buildPhases = (
+				6897481990E44DCE3A960514 /* [CP] Check Pods Manifest.lock */,
+				9C1A3B412A0C84C700A43CEA /* Sources */,
+				9C1A3B422A0C84C700A43CEA /* Frameworks */,
+				9C1A3B432A0C84C700A43CEA /* Resources */,
+				41045BD91DAECD2FE7AB581F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GMOpenSSL(OsxDemo)";
+			productName = "GMOpenSSL(OsxDemo)";
+			productReference = 9C1A3B452A0C84C700A43CEA /* GMOpenSSL(OsxDemo).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,10 +192,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					9C159E312703ECE70023B704 = {
-						CreatedOnToolsVersion = 13.0;
+					9C1A3B272A0C848D00A43CEA = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					9C1A3B442A0C84C700A43CEA = {
+						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
@@ -155,42 +215,69 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C159E312703ECE70023B704 /* GMOpenSSL (OCDemo) */,
+				9C1A3B272A0C848D00A43CEA /* GMOpenSSL(iOSDemo) */,
+				9C1A3B442A0C84C700A43CEA /* GMOpenSSL(OsxDemo) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9C159E302703ECE70023B704 /* Resources */ = {
+		9C1A3B262A0C848D00A43CEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C159E452703ECE80023B704 /* LaunchScreen.storyboard in Resources */,
-				9C159E422703ECE80023B704 /* Assets.xcassets in Resources */,
+				9C1A3B3A2A0C848E00A43CEA /* LaunchScreen.storyboard in Resources */,
+				9C1A3B372A0C848E00A43CEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C1A3B432A0C84C700A43CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1A3B4E2A0C84C800A43CEA /* Assets.xcassets in Resources */,
+				9C1A3B512A0C84C800A43CEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		023486B80B2B168415BC0901 /* [CP] Embed Pods Frameworks */ = {
+		222182093029E6999C295F90 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL (OCDemo)/Pods-GMOpenSSL (OCDemo)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL(iOSDemo)/Pods-GMOpenSSL(iOSDemo)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL (OCDemo)/Pods-GMOpenSSL (OCDemo)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL(iOSDemo)/Pods-GMOpenSSL(iOSDemo)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL (OCDemo)/Pods-GMOpenSSL (OCDemo)-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL(iOSDemo)/Pods-GMOpenSSL(iOSDemo)-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		225A473465936A1CF867BD0B /* [CP] Check Pods Manifest.lock */ = {
+		41045BD91DAECD2FE7AB581F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL(OsxDemo)/Pods-GMOpenSSL(OsxDemo)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL(OsxDemo)/Pods-GMOpenSSL(OsxDemo)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GMOpenSSL(OsxDemo)/Pods-GMOpenSSL(OsxDemo)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6897481990E44DCE3A960514 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,7 +292,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GMOpenSSL (OCDemo)-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GMOpenSSL(OsxDemo)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E64425E190A80B3D6D2EC25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GMOpenSSL(iOSDemo)-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -215,25 +324,43 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9C159E2E2703ECE70023B704 /* Sources */ = {
+		9C1A3B242A0C848D00A43CEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C159E372703ECE70023B704 /* AppDelegate.m in Sources */,
-				9C159E502703EDB90023B704 /* GMViewController.m in Sources */,
-				9C159E482703ECE80023B704 /* main.m in Sources */,
+				9C1A3B5A2A0C867400A43CEA /* GMDemoVC.m in Sources */,
+				9C1A3B2C2A0C848D00A43CEA /* AppDelegate.m in Sources */,
+				9C1A3B3D2A0C848E00A43CEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C1A3B412A0C84C700A43CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3F5A802A0CB75200807875 /* GMOsxDemoVC.m in Sources */,
+				9C1A3B532A0C84C800A43CEA /* main.m in Sources */,
+				9C1A3B492A0C84C700A43CEA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9C159E432703ECE80023B704 /* LaunchScreen.storyboard */ = {
+		9C1A3B382A0C848E00A43CEA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9C159E442703ECE80023B704 /* Base */,
+				9C1A3B392A0C848E00A43CEA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9C1A3B4F2A0C84C800A43CEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C1A3B502A0C84C800A43CEA /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -290,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -343,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -351,22 +478,24 @@
 			};
 			name = Release;
 		};
-		9C159E4C2703ECE80023B704 /* Debug */ = {
+		9C1A3B3E2A0C848E00A43CEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B488B0F93E49D05BC1291EA /* Pods-GMOpenSSL (OCDemo).debug.xcconfig */;
+			baseConfigurationReference = 2295B188BC0FFA8517E9187C /* Pods-GMOpenSSL(iOSDemo).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9CA5KUE8T7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "GMOpenSSLDemo/GMOpenSSLDemo-Info.plist";
+				INFOPLIST_FILE = "GMOpenSSL(iOSDemo)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,29 +503,29 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e x86_64";
 			};
 			name = Debug;
 		};
-		9C159E4D2703ECE80023B704 /* Release */ = {
+		9C1A3B3F2A0C848E00A43CEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7E6BD4508E4D1919063B996 /* Pods-GMOpenSSL (OCDemo).release.xcconfig */;
+			baseConfigurationReference = 8760E4FE3B89B18E279403E5 /* Pods-GMOpenSSL(iOSDemo).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9CA5KUE8T7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "GMOpenSSLDemo/GMOpenSSLDemo-Info.plist";
+				INFOPLIST_FILE = "GMOpenSSL(iOSDemo)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,10 +533,72 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e x86_64";
+			};
+			name = Release;
+		};
+		9C1A3B562A0C84C800A43CEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39BD3688D02F9DC377C07AB6 /* Pods-GMOpenSSL(OsxDemo).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "GMOpenSSL(OsxDemo)/GMOpenSSL_OsxDemo_.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 9CA5KUE8T7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		9C1A3B572A0C84C800A43CEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7088F184578D99011986E04E /* Pods-GMOpenSSL(OsxDemo).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "GMOpenSSL(OsxDemo)/GMOpenSSL_OsxDemo_.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 9CA5KUE8T7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -423,11 +614,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C159E4B2703ECE80023B704 /* Build configuration list for PBXNativeTarget "GMOpenSSL (OCDemo)" */ = {
+		9C1A3B402A0C848E00A43CEA /* Build configuration list for PBXNativeTarget "GMOpenSSL(iOSDemo)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C159E4C2703ECE80023B704 /* Debug */,
-				9C159E4D2703ECE80023B704 /* Release */,
+				9C1A3B3E2A0C848E00A43CEA /* Debug */,
+				9C1A3B3F2A0C848E00A43CEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C1A3B552A0C84C800A43CEA /* Build configuration list for PBXNativeTarget "GMOpenSSL(OsxDemo)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1A3B562A0C84C800A43CEA /* Debug */,
+				9C1A3B572A0C84C800A43CEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
