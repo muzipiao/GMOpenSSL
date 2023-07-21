@@ -26,7 +26,7 @@ IPHONEOS_SDK=$(xcrun --sdk iphoneos --show-sdk-path)
 IPHONESIMULATOR_SDK=$(xcrun --sdk iphonesimulator --show-sdk-path)
 OSX_SDK=$(xcrun --sdk macosx --show-sdk-path)
 
-export MACOSX_DEPLOYMENT_TARGET="10.13" #
+export MACOSX_DEPLOYMENT_TARGET="10.13" # 
 
 # Turn versions like 1.2.3 into numbers that can be compare by bash.
 version()
