@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GMOpenSSL'
-  s.version          = '3.0.0'
-  s.summary          = 'Build OpenSSL for iOS and OS X，OpenSSL version 1.1.1t。'
+  s.version          = '3.0.1'
+  s.summary          = 'Build OpenSSL for iOS and OS X，OpenSSL version 1.1.1u。'
 
   s.description      = <<-DESC
   Build OpenSSL for iOS and OS X, and add sm2, sm3, sm4 header files。
