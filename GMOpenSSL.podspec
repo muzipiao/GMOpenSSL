@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GMOpenSSL'
-  s.version          = '3.0.1'
+  s.version          = '3.0.2'
   s.summary          = 'Build OpenSSL for iOS and OS X，OpenSSL version 1.1.1u。'
 
   s.description      = <<-DESC
@@ -20,7 +20,6 @@ Pod::Spec.new do |s|
   s.author           = { 'lifei' => 'lifei_zdjl@126.com' }
   s.source           = { :git => 'https://github.com/muzipiao/GMOpenSSL.git', :tag => s.version.to_s }
   s.requires_arc          = true
-  s.cocoapods_version     = '>= 1.9'
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.13'
   s.preserve_paths        = 'Frameworks/OpenSSL.xcframework'
