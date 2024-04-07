@@ -44,3 +44,14 @@ dependencies: [
 如果编译的静态库不能满足需求，可以自行运行脚本编译。工程目录下有一个名称为 OpenSSL_BUILD 的文件夹，依次执行 cd 切换到当前目录下，然后执行`make`即可，待执行完毕，即可看到编译完成的 `OpenSSL_BUILD/Frameworks/OpenSSL.xcframwork`。静态库在对应平台的 lib 文件夹下，如`iphoneos/lib/libcrypto.a`。
 
 编译工程依赖[开源项目OpenSSL](https://github.com/krzyzanowskim/OpenSSL)，由于此项目未暴露国密头文件，本目录与原项目有小量改动；主要改动为将 OpenSSL 源码 include/crypto/ 路径下的 sm2.h、sm3.h，sm4.h 都拷贝至项目。
+
+**主要步骤：**
+
+1. 将`OpenSSL_BUILD/gmheaders`文件夹下头文件夹拖至项目，并设置头文件依赖为**public**；
+2. 在`OpenSSL_BUILD/support`目录下的`OpenSSL.h`中添加下方导入，然后执行`make`编译即可；
+
+```objc
+#include <OpenSSL/sm2.h>
+#include <OpenSSL/sm3.h>
+#include <OpenSSL/sm4.h>
+```

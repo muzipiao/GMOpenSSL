@@ -16,7 +16,7 @@ BASE_PWD="$PWD"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 FWNAME="OpenSSL"
 OUTPUT_DIR=$( mktemp -d )
-COMMON_SETUP=" -project ${SCRIPT_DIR}/../${FWNAME}.xcodeproj -configuration Release -quiet BUILD_LIBRARY_FOR_DISTRIBUTION=YES $XC_USER_DEFINED_VARS"
+COMMON_SETUP=" -project ${SCRIPT_DIR}/../${FWNAME}.xcodeproj -configuration Release BUILD_LIBRARY_FOR_DISTRIBUTION=YES $XC_USER_DEFINED_VARS"
 
 # macOS
 DERIVED_DATA_PATH=$( mktemp -d )
@@ -91,11 +91,11 @@ ditto "${OUTPUT_DIR}/macosx_catalyst/${FWNAME}.framework" "${BASE_PWD}/Framework
 # XCFramework
 rm -rf "${BASE_PWD}/Frameworks/${FWNAME}.xcframework"
 
-xcrun xcodebuild -quiet -create-xcframework \
-	-framework "${OUTPUT_DIR}/iphoneos/${FWNAME}.framework" \
-	-framework "${OUTPUT_DIR}/iphonesimulator/${FWNAME}.framework" \
-	-framework "${OUTPUT_DIR}/macosx/${FWNAME}.framework" \
-	-framework "${OUTPUT_DIR}/macosx_catalyst/${FWNAME}.framework" \
+xcrun xcodebuild -create-xcframework \
+	-framework "${BASE_PWD}/Frameworks/iphoneos/${FWNAME}.framework" \
+	-framework "${BASE_PWD}/Frameworks/iphonesimulator/${FWNAME}.framework" \
+	-framework "${BASE_PWD}/Frameworks/macosx/${FWNAME}.framework" \
+	-framework "${BASE_PWD}/Frameworks/macosx_catalyst/${FWNAME}.framework" \
 	-output "${BASE_PWD}/Frameworks/${FWNAME}.xcframework"
 
 # Zip archive
