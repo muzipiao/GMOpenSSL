@@ -13,7 +13,7 @@ cocoapods 不支持直接集成 OpenSSL，将 OpenSSL 源码编译为 framework�
 
 |GMOpenSSL 版本|OpenSSL 版本|支持架构|Bitcode|兼容版本|
 |:---:|:---:|:---:|:---:|:---:|
-|3.0.5|1.1.1u|x86_64 arm64|不包含|iOS>= iOS 9.0, OSX>=10.13|
+|3.0.6|1.1.1u|x86_64 arm64|不包含|iOS>= iOS 9.0, OSX>=10.13|
 |2.2.9|1.1.1q|x86_64 arm64|包含|>= iOS 9.0|
 |2.2.4|1.1.1l|x86_64 arm64 arm64e armv7 armv7s|包含|>= iOS 8.0|
 
@@ -54,4 +54,23 @@ dependencies: [
 #include <OpenSSL/sm2.h>
 #include <OpenSSL/sm3.h>
 #include <OpenSSL/sm4.h>
+```
+
+## 可能遇到的错误
+
+### 二进制文件因签名审核被拒：
+
+```text
+ITMS-91065: Missing signature - Your app includes “Frameworks/OpenSSL.framework/OpenSSL”, which includes BoringSSL / openssl_grpc, an SDK that was identified in the documentation as a privacy-impacting third-party SDK. If a new app includes a privacy-impacting SDK, or an app update adds a new privacy-impacting SDK, the SDK must include a signature file. Please contact the provider of the SDK that includes this file to get an updated SDK version with a signature.
+```
+
+**解决办法**，对指定二进制文件手动签名即可，可参考[issues 92](https://github.com/muzipiao/GMObjC/issues/92)。
+
+```shell
+# 查看签名，无签名显示 code object is not signed at all
+codesign -dv openssl.xcframework
+# 钥匙串复制证书名称，执行此命令即可签名。
+xcrun codesign --timestamp -s "证书全称" openssl.xcframework
+# 验证签名
+xcrun codesign --verify --verbose openssl.xcframework
 ```
