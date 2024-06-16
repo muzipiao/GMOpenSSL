@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GMOpenSSL'
-  s.version          = '3.0.6'
+  s.version          = '3.0.7'
   s.summary          = 'Build OpenSSL for iOS and OS X，OpenSSL version 1.1.1u。'
 
   s.description      = <<-DESC
@@ -24,5 +24,4 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.13'
   s.preserve_paths        = 'Frameworks/OpenSSL.xcframework'
   s.vendored_frameworks   = 'Frameworks/OpenSSL.xcframework'
-  s.pod_target_xcconfig   = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
