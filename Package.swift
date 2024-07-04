@@ -1,11 +1,11 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "OpenSSL",
-    platforms: [.iOS(.v11), .macOS(.v10_13)],
+    platforms: [.iOS(.v12), .macOS(.v10_13)],
     products: [
         .library(name: "OpenSSL", targets: ["OpenSSL"]),
     ],

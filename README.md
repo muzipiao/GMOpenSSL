@@ -13,7 +13,7 @@ cocoapods 不支持直接集成 OpenSSL，将 OpenSSL 源码编译为 framework�
 
 |GMOpenSSL 版本|OpenSSL 版本|支持架构|Bitcode|兼容版本|
 |:---:|:---:|:---:|:---:|:---:|
-|3.0.7|1.1.1u|x86_64 arm64|不包含|iOS>= iOS 9.0, OSX>=10.13|
+|3.0.8|1.1.1w|x86_64 arm64|不包含|iOS>= iOS 9.0, OSX>=10.13|
 |2.2.9|1.1.1q|x86_64 arm64|包含|>= iOS 9.0|
 |2.2.4|1.1.1l|x86_64 arm64 arm64e armv7 armv7s|包含|>= iOS 8.0|
 
@@ -68,9 +68,9 @@ ITMS-91065: Missing signature - Your app includes “Frameworks/OpenSSL.framewor
 
 ```shell
 # 查看签名，无签名显示 code object is not signed at all
-codesign -dv openssl.xcframework
+codesign -dv --verbose=4 OpenSSL.xcframework
 # 钥匙串复制证书名称，执行此命令即可签名。
-xcrun codesign --timestamp -s "证书全称" openssl.xcframework
+xcrun codesign --timestamp -s "证书全称" OpenSSL.xcframework
 # 验证签名
-xcrun codesign --verify --verbose openssl.xcframework
+xcrun codesign --verify --verbose OpenSSL.xcframework
 ```
