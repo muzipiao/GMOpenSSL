@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752910AB2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 752910AA2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy */; };
+		752910AC2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 752910AA2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy */; };
+		752910AD2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 752910AA2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy */; };
+		752910AE2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 752910AA2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy */; };
 		752D6DA4258471CC00E999E1 /* err.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B05A62256E7B9100FB91E0 /* err.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		752D6DA5258471CC00E999E1 /* pkcs7err.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B05A3C256E7B9000FB91E0 /* pkcs7err.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		752D6DA6258471CC00E999E1 /* dh.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B05A21256E7B8F00FB91E0 /* dh.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -436,28 +440,25 @@
 		75B05C00256E801E00FB91E0 /* OpenSSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B05BFF256E801D00FB91E0 /* OpenSSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75B05C05256E802C00FB91E0 /* OpenSSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B05C04256E802C00FB91E0 /* OpenSSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75B05C17256E826800FB91E0 /* OpenSSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B05C16256E826800FB91E0 /* OpenSSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C6662A0B910E00AD0A6B /* sm2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6632A0B910E00AD0A6B /* sm2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C6672A0B910E00AD0A6B /* sm2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6632A0B910E00AD0A6B /* sm2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C6682A0B910E00AD0A6B /* sm2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6632A0B910E00AD0A6B /* sm2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C6692A0B910E00AD0A6B /* sm2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6632A0B910E00AD0A6B /* sm2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C66A2A0B910E00AD0A6B /* sm3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6642A0B910E00AD0A6B /* sm3.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C66B2A0B910E00AD0A6B /* sm3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6642A0B910E00AD0A6B /* sm3.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C66C2A0B910E00AD0A6B /* sm3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6642A0B910E00AD0A6B /* sm3.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C66D2A0B910E00AD0A6B /* sm3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6642A0B910E00AD0A6B /* sm3.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C66E2A0B910E00AD0A6B /* sm4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6652A0B910E00AD0A6B /* sm4.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C66F2A0B910E00AD0A6B /* sm4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6652A0B910E00AD0A6B /* sm4.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C6702A0B910E00AD0A6B /* sm4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6652A0B910E00AD0A6B /* sm4.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C84C6712A0B910E00AD0A6B /* sm4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C84C6652A0B910E00AD0A6B /* sm4.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CDD3C2D2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD3C2C2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy */; };
-		9CDD3C2E2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD3C2C2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy */; };
-		9CDD3C2F2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD3C2C2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy */; };
-		9CDD3C302BCF6399002CC5F3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD3C2C2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy */; };
+		9C54664E2C36871600DE6983 /* sm2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664A2C36871600DE6983 /* sm2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C54664F2C36871600DE6983 /* sm2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664A2C36871600DE6983 /* sm2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466502C36871600DE6983 /* sm2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664A2C36871600DE6983 /* sm2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466512C36871600DE6983 /* sm2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664A2C36871600DE6983 /* sm2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466522C36871600DE6983 /* sm3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664B2C36871600DE6983 /* sm3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466532C36871600DE6983 /* sm3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664B2C36871600DE6983 /* sm3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466542C36871600DE6983 /* sm3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664B2C36871600DE6983 /* sm3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466552C36871600DE6983 /* sm3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664B2C36871600DE6983 /* sm3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466562C36871600DE6983 /* sm4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664C2C36871600DE6983 /* sm4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466572C36871600DE6983 /* sm4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664C2C36871600DE6983 /* sm4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466582C36871600DE6983 /* sm4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664C2C36871600DE6983 /* sm4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C5466592C36871600DE6983 /* sm4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54664C2C36871600DE6983 /* sm4.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		751BE47925845DB800E66ABE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = macosx_catalyst/lib/libcrypto.a; sourceTree = "<group>"; };
 		751BE47B25845DC300E66ABE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = macosx_catalyst/lib/libssl.a; sourceTree = "<group>"; };
 		751BE48025845E1F00E66ABE /* opensslconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = opensslconf.h; path = macos_catalyst/include/openssl/opensslconf.h; sourceTree = "<group>"; };
+		752910AA2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = support/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		752D6E16258471CC00E999E1 /* OpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		752D6E422584738800E999E1 /* opensslconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = opensslconf.h; path = macosx_catalyst/include/openssl/opensslconf.h; sourceTree = "<group>"; };
 		753EF2CB2567514F008FDE33 /* OpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -786,10 +787,9 @@
 		75B05C04256E802C00FB91E0 /* OpenSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenSSL.h; path = support/macos/OpenSSL.h; sourceTree = "<group>"; };
 		75B05C16256E826800FB91E0 /* OpenSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenSSL.h; path = support/iphonesimulator/OpenSSL.h; sourceTree = "<group>"; };
 		863B6DD424B83C2D002E03CC /* OpenSSL.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OpenSSL.xcconfig; sourceTree = "<group>"; };
-		9C84C6632A0B910E00AD0A6B /* sm2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm2.h; sourceTree = "<group>"; };
-		9C84C6642A0B910E00AD0A6B /* sm3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm3.h; sourceTree = "<group>"; };
-		9C84C6652A0B910E00AD0A6B /* sm4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm4.h; sourceTree = "<group>"; };
-		9CDD3C2C2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = support/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9C54664A2C36871600DE6983 /* sm2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm2.h; sourceTree = "<group>"; };
+		9C54664B2C36871600DE6983 /* sm3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm3.h; sourceTree = "<group>"; };
+		9C54664C2C36871600DE6983 /* sm4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sm4.h; sourceTree = "<group>"; };
 		9F4A265C223BD82B005CB63A /* OpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4A2716223BE476005CB63A /* OpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1221,12 +1221,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9C84C6622A0B910E00AD0A6B /* gmheaders */ = {
+		9C54664D2C36871600DE6983 /* gmheaders */ = {
 			isa = PBXGroup;
 			children = (
-				9C84C6632A0B910E00AD0A6B /* sm2.h */,
-				9C84C6642A0B910E00AD0A6B /* sm3.h */,
-				9C84C6652A0B910E00AD0A6B /* sm4.h */,
+				9C54664A2C36871600DE6983 /* sm2.h */,
+				9C54664B2C36871600DE6983 /* sm3.h */,
+				9C54664C2C36871600DE6983 /* sm4.h */,
 			);
 			path = gmheaders;
 			sourceTree = "<group>";
@@ -1234,12 +1234,12 @@
 		9F4A2626223BCE31005CB63A = {
 			isa = PBXGroup;
 			children = (
-				9C84C6622A0B910E00AD0A6B /* gmheaders */,
+				752910AA2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy */,
+				9C54664D2C36871600DE6983 /* gmheaders */,
 				752D6E4C258473AF00E999E1 /* catalyst */,
 				75B05ADD256E7BB900FB91E0 /* macosx */,
 				75B059FE256E7B5F00FB91E0 /* iphoneos */,
 				75B059F5256E7AFD00FB91E0 /* iphonesimulator */,
-				9CDD3C2C2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy */,
 				863B6DD424B83C2D002E03CC /* OpenSSL.xcconfig */,
 				9F4A264F223BD6C6005CB63A /* Products */,
 				75B05BB8256E7C0000FB91E0 /* Frameworks */,
@@ -1306,7 +1306,7 @@
 				752D6DCB258471CC00E999E1 /* objects.h in Headers */,
 				752D6DCC258471CC00E999E1 /* des.h in Headers */,
 				752D6DCD258471CC00E999E1 /* uierr.h in Headers */,
-				9C84C66D2A0B910E00AD0A6B /* sm3.h in Headers */,
+				9C5466552C36871600DE6983 /* sm3.h in Headers */,
 				752D6DCE258471CC00E999E1 /* ebcdic.h in Headers */,
 				752D6DCF258471CC00E999E1 /* comperr.h in Headers */,
 				752D6DD0258471CC00E999E1 /* ocsperr.h in Headers */,
@@ -1317,7 +1317,7 @@
 				752D6DD5258471CC00E999E1 /* x509_vfy.h in Headers */,
 				752D6DD6258471CC00E999E1 /* ssl2.h in Headers */,
 				752D6DD7258471CC00E999E1 /* ct.h in Headers */,
-				9C84C6712A0B910E00AD0A6B /* sm4.h in Headers */,
+				9C5466592C36871600DE6983 /* sm4.h in Headers */,
 				752D6DD8258471CC00E999E1 /* ocsp.h in Headers */,
 				752D6DD9258471CC00E999E1 /* tserr.h in Headers */,
 				752D6DDA258471CC00E999E1 /* asn1err.h in Headers */,
@@ -1332,7 +1332,7 @@
 				752D6DE2258471CC00E999E1 /* crypto.h in Headers */,
 				752D6DE3258471CC00E999E1 /* modes.h in Headers */,
 				752D6DE4258471CC00E999E1 /* x509.h in Headers */,
-				9C84C6692A0B910E00AD0A6B /* sm2.h in Headers */,
+				9C5466512C36871600DE6983 /* sm2.h in Headers */,
 				752D6DE5258471CC00E999E1 /* dsa.h in Headers */,
 				752D6DE6258471CC00E999E1 /* srp.h in Headers */,
 				752D6DE7258471CC00E999E1 /* safestack.h in Headers */,
@@ -1383,7 +1383,7 @@
 				75B05980256E7AD100FB91E0 /* bnerr.h in Headers */,
 				75B05981256E7AD100FB91E0 /* x509err.h in Headers */,
 				75B05982256E7AD100FB91E0 /* sslerr.h in Headers */,
-				9C84C66F2A0B910E00AD0A6B /* sm4.h in Headers */,
+				9C5466572C36871600DE6983 /* sm4.h in Headers */,
 				75B05983256E7AD100FB91E0 /* ocsperr.h in Headers */,
 				75B05984256E7AD100FB91E0 /* stack.h in Headers */,
 				75B05985256E7AD100FB91E0 /* ossl_typ.h in Headers */,
@@ -1392,7 +1392,7 @@
 				75B05989256E7AD100FB91E0 /* crypto.h in Headers */,
 				75B0598A256E7AD100FB91E0 /* txt_db.h in Headers */,
 				75B0598B256E7AD200FB91E0 /* rc2.h in Headers */,
-				9C84C6672A0B910E00AD0A6B /* sm2.h in Headers */,
+				9C54664F2C36871600DE6983 /* sm2.h in Headers */,
 				75B0598C256E7AD200FB91E0 /* obj_mac.h in Headers */,
 				75B0598D256E7AD200FB91E0 /* rsaerr.h in Headers */,
 				75B0598E256E7AD200FB91E0 /* buffer.h in Headers */,
@@ -1474,7 +1474,7 @@
 				75B059DB256E7AD400FB91E0 /* storeerr.h in Headers */,
 				75B059DC256E7AD400FB91E0 /* ebcdic.h in Headers */,
 				75B059DD256E7AD400FB91E0 /* rc4.h in Headers */,
-				9C84C66B2A0B910E00AD0A6B /* sm3.h in Headers */,
+				9C5466532C36871600DE6983 /* sm3.h in Headers */,
 				75B059DE256E7AD400FB91E0 /* sha.h in Headers */,
 				75B059DF256E7AD400FB91E0 /* objects.h in Headers */,
 				75B059E0256E7AD500FB91E0 /* uierr.h in Headers */,
@@ -1498,7 +1498,7 @@
 				75B05ACF256E7B9600FB91E0 /* err.h in Headers */,
 				75B05AA9256E7B9400FB91E0 /* pkcs7err.h in Headers */,
 				75B05A8E256E7B9300FB91E0 /* dh.h in Headers */,
-				9C84C66E2A0B910E00AD0A6B /* sm4.h in Headers */,
+				9C5466562C36871600DE6983 /* sm4.h in Headers */,
 				75B05ACD256E7B9600FB91E0 /* srtp.h in Headers */,
 				75B05A94256E7B9300FB91E0 /* sslerr.h in Headers */,
 				75B05AD7256E7B9700FB91E0 /* rc4.h in Headers */,
@@ -1507,7 +1507,7 @@
 				75B05AC0256E7B9500FB91E0 /* rc2.h in Headers */,
 				75B05A7C256E7B9200FB91E0 /* tls1.h in Headers */,
 				75B05AA0256E7B9400FB91E0 /* buffer.h in Headers */,
-				9C84C6662A0B910E00AD0A6B /* sm2.h in Headers */,
+				9C54664E2C36871600DE6983 /* sm2.h in Headers */,
 				75B05ABE256E7B9500FB91E0 /* rand_drbg.h in Headers */,
 				75B05AC4256E7B9600FB91E0 /* conf.h in Headers */,
 				75B05AA1256E7B9400FB91E0 /* bnerr.h in Headers */,
@@ -1589,7 +1589,7 @@
 				75B05A6E256E7B9100FB91E0 /* objectserr.h in Headers */,
 				75B05AB3256E7B9500FB91E0 /* store.h in Headers */,
 				75B05A7A256E7B9200FB91E0 /* shim.h in Headers */,
-				9C84C66A2A0B910E00AD0A6B /* sm3.h in Headers */,
+				9C5466522C36871600DE6983 /* sm3.h in Headers */,
 				75B05A90256E7B9300FB91E0 /* rand.h in Headers */,
 				75B05A6F256E7B9100FB91E0 /* idea.h in Headers */,
 				75B05A71256E7B9100FB91E0 /* storeerr.h in Headers */,
@@ -1613,7 +1613,7 @@
 				75B05BAC256E7BD600FB91E0 /* err.h in Headers */,
 				75B05B78256E7BD400FB91E0 /* evp.h in Headers */,
 				75B05B92256E7BD500FB91E0 /* buffererr.h in Headers */,
-				9C84C6702A0B910E00AD0A6B /* sm4.h in Headers */,
+				9C5466582C36871600DE6983 /* sm4.h in Headers */,
 				75B05BB2256E7BD600FB91E0 /* dtls1.h in Headers */,
 				75B05B4B256E7BD200FB91E0 /* x509err.h in Headers */,
 				75B05BB4256E7BD600FB91E0 /* idea.h in Headers */,
@@ -1622,7 +1622,7 @@
 				75B05B69256E7BD300FB91E0 /* ec.h in Headers */,
 				75B05B4E256E7BD300FB91E0 /* pemerr.h in Headers */,
 				75B05B63256E7BD300FB91E0 /* whrlpool.h in Headers */,
-				9C84C6682A0B910E00AD0A6B /* sm2.h in Headers */,
+				9C5466502C36871600DE6983 /* sm2.h in Headers */,
 				75B05B84256E7BD400FB91E0 /* bn.h in Headers */,
 				75B05BA2256E7BD500FB91E0 /* pkcs7.h in Headers */,
 				75B05B75256E7BD400FB91E0 /* ocsp.h in Headers */,
@@ -1704,7 +1704,7 @@
 				75B05B6C256E7BD400FB91E0 /* rsaerr.h in Headers */,
 				75B05B95256E7BD500FB91E0 /* rand_drbg.h in Headers */,
 				75B05B68256E7BD300FB91E0 /* storeerr.h in Headers */,
-				9C84C66C2A0B910E00AD0A6B /* sm3.h in Headers */,
+				9C5466542C36871600DE6983 /* sm3.h in Headers */,
 				75B05B82256E7BD400FB91E0 /* rc4.h in Headers */,
 				75B05B59256E7BD300FB91E0 /* seed.h in Headers */,
 				75B05B61256E7BD300FB91E0 /* tserr.h in Headers */,
@@ -1802,7 +1802,8 @@
 		9F4A2627223BCE31005CB63A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1160;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					9F4A265B223BD82B005CB63A = {
 						CreatedOnToolsVersion = 10.1;
@@ -1818,6 +1819,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9F4A2626223BCE31005CB63A;
 			productRefGroup = 9F4A264F223BD6C6005CB63A /* Products */;
@@ -1837,7 +1839,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDD3C302BCF6399002CC5F3 /* PrivacyInfo.xcprivacy in Resources */,
+				752910AE2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1845,7 +1847,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDD3C2E2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy in Resources */,
+				752910AC2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1853,7 +1855,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDD3C2D2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy in Resources */,
+				752910AB2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1861,7 +1863,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDD3C2F2BCF6399002CC5F3 /* PrivacyInfo.xcprivacy in Resources */,
+				752910AD2C1AF039007D1ED7 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1931,10 +1933,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4BX77JHQHH;
@@ -1942,6 +1945,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1970,12 +1974,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/macosx_catalyst/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.krzyzanowskim.OpenSSL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifei.gmopenssl;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -2017,10 +2021,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4BX77JHQHH;
@@ -2028,6 +2033,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -2050,7 +2056,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/macosx_catalyst/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-all_load",
@@ -2098,17 +2104,16 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4BX77JHQHH;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -2137,6 +2142,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iphonesimulator/lib",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-all_load",
@@ -2184,17 +2190,16 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4BX77JHQHH;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -2217,6 +2222,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iphonesimulator/lib",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-all_load",
@@ -2237,6 +2243,38 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 863B6DD424B83C2D002E03CC /* OpenSSL.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = OpenSSL;
 			};
 			name = Debug;
@@ -2245,6 +2283,36 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 863B6DD424B83C2D002E03CC /* OpenSSL.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = OpenSSL;
 			};
 			name = Release;
@@ -2281,11 +2349,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4BX77JHQHH;
@@ -2294,6 +2361,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -2322,6 +2390,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iphoneos/lib",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-all_load",
@@ -2369,17 +2438,19 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4BX77JHQHH;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4BX77JHQHH;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -2402,6 +2473,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iphoneos/lib",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-all_load",
@@ -2450,17 +2522,19 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4BX77JHQHH;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_VERSION = A;
@@ -2489,12 +2563,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/macosx/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.krzyzanowskim.OpenSSL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifei.gmopenssl;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2533,17 +2607,19 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4BX77JHQHH;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
@@ -2566,7 +2642,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/macosx/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-all_load",

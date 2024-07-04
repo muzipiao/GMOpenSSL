@@ -107,3 +107,6 @@
 #include <OpenSSL/x509err.h>
 #include <OpenSSL/x509v3.h>
 #include <OpenSSL/x509v3err.h>
+#include <OpenSSL/sm2.h>
+#include <OpenSSL/sm3.h>
+#include <OpenSSL/sm4.h>

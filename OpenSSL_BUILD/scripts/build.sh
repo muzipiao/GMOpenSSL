@@ -26,7 +26,7 @@ IPHONEOS_SDK=$(xcrun --sdk iphoneos --show-sdk-path)
 IPHONESIMULATOR_SDK=$(xcrun --sdk iphonesimulator --show-sdk-path)
 OSX_SDK=$(xcrun --sdk macosx --show-sdk-path)
 
-export MACOSX_DEPLOYMENT_TARGET="10.13" # 
+export MACOSX_DEPLOYMENT_TARGET="10.13" #
 
 # Turn versions like 1.2.3 into numbers that can be compare by bash.
 version()
@@ -70,7 +70,7 @@ configure() {
       echo "Failed to parse SDK path '${SDK}'!" >&1
       exit 2
    fi
-   
+
 
    if [ "$OS" == "MacOSX" ]; then
       ${SRC_DIR}/Configure macos-$ARCH no-asm no-shared --prefix="${PREFIX}" &> "${PREFIX}.config.log"
@@ -109,13 +109,13 @@ build()
 
    # fix headers for Swift
 
-   sed -ie "s/BIGNUM \*I,/BIGNUM \*i,/g" ${SRC_DIR}/crypto/rsa/rsa_local.h   
+   sed -ie "s/BIGNUM \*I,/BIGNUM \*i,/g" ${SRC_DIR}/crypto/rsa/rsa_local.h
 
    configure "${OS}" $ARCH ${BUILD_DIR} ${SRC_DIR}
 
    LOG_PATH="${PREFIX}.build.log"
    echo "Building ${LOG_PATH}"
-   make &> ${LOG_PATH}
+   make -j${NPROCS} &> ${LOG_PATH}
    make install &> ${LOG_PATH}
    cd ${BASE_PWD}
 
@@ -255,7 +255,7 @@ if [ ! -f "${SCRIPT_DIR}/../openssl-${OPENSSL_VERSION}.tar.gz" ]; then
    curl -fL "https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz.sha256" -o "${SCRIPT_DIR}/../openssl-${OPENSSL_VERSION}.tar.gz.sha256"
    DIGEST=$( cat ${SCRIPT_DIR}/../openssl-${OPENSSL_VERSION}.tar.gz.sha256 )
 
-   if [[ "$(shasum -a 256 "openssl-${OPENSSL_VERSION}.tar.gz" | awk '{print $1}')" != "${DIGEST}" ]]
+   if [[ "$(shasum -a 256 "openssl-${OPENSSL_VERSION}.tar.gz" | awk '{ print " "$1}')" != "${DIGEST}" ]]
    then
       echo "openssl-${OPENSSL_VERSION}.tar.gz: checksum mismatch"
       exit 1
