@@ -1,6 +1,6 @@
 # GMOpenSSL
 
-[![Pod Version](https://img.shields.io/badge/pod-3.0.3-blue)](https://cocoapods.org/pods/GMOpenSSL)
+[![Pod Version](https://img.shields.io/badge/pod-3.0.9-blue)](https://cocoapods.org/pods/GMOpenSSL)
 [![Platform](https://img.shields.io/badge/platform-ios%20%7C%20osx-lightgrey)](https://cocoapods.org/pods/GMOpenSSL)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/muzipiao/GMOpenSSL)
 [![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
