@@ -9,4 +9,4 @@ build:
 	OPENSSL_VERSION="1.1.1w" $(CWD)/scripts/build.sh
 
 frameworks:
-	$(CWD)/scripts/create-frameworks.sh "Apple Development"
+	$(CWD)/scripts/create-frameworks.sh "Apple Distribution"
