@@ -9,13 +9,15 @@
 
 cocoapods 不支持直接集成 OpenSSL，将 OpenSSL 源码编译为 framework，并发布至 cocoapods，名称为 GMOpenSSL，方便通过 cocoapods 集成。
 
+此项目主要作为国密开源库 [GMObjC](https://muzipiao.github.io/gmdocs/) 依赖库，也可以单独使用。
+
 ## 版本映射
 
-|GMOpenSSL 版本|OpenSSL 版本|支持架构|Bitcode|兼容版本|
-|:---:|:---:|:---:|:---:|:---:|
-|3.0.9|1.1.1w|x86_64 arm64|不包含|iOS>= iOS 9.0, OSX>=10.13|
-|2.2.9|1.1.1q|x86_64 arm64|包含|>= iOS 9.0|
-|2.2.4|1.1.1l|x86_64 arm64 arm64e armv7 armv7s|包含|>= iOS 8.0|
+| GMOpenSSL 版本 | OpenSSL 版本 |             支持架构             | Bitcode |         兼容版本          |
+| :------------: | :----------: | :------------------------------: | :-----: | :-----------------------: |
+|     3.1.0      |    1.1.1w    |           x86_64 arm64           | 不包含  | iOS>= iOS 9.0, OSX>=10.13 |
+|     2.2.9      |    1.1.1q    |           x86_64 arm64           |  包含   |        >= iOS 9.0         |
+|     2.2.4      |    1.1.1l    | x86_64 arm64 arm64e armv7 armv7s |  包含   |        >= iOS 8.0         |
 
 ## CocoaPods
 
@@ -35,7 +37,7 @@ GMOpenSSL 支持 SwiftPM，在工程中使用，点击 `File` -> `Swift Packages
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muzipiao/GMOpenSSL.git", from: "3.0.3")
+    .package(url: "https://github.com/muzipiao/GMOpenSSL.git", from: "3.1.0")
 ],
 ```
 
