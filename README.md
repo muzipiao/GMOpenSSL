@@ -15,7 +15,7 @@ cocoapods 不支持直接集成 OpenSSL，将 OpenSSL 源码编译为 framework�
 
 | GMOpenSSL 版本 | OpenSSL 版本 |             支持架构             | Bitcode |         兼容版本          |
 | :------------: | :----------: | :------------------------------: | :-----: | :-----------------------: |
-|     3.1.0      |    1.1.1w    |           x86_64 arm64           | 不包含  | iOS>= iOS 9.0, OSX>=10.13 |
+|     3.1.1      |    1.1.1w    |           x86_64 arm64           | 不包含  | iOS>= iOS 9.0, OSX>=10.13 |
 |     2.2.9      |    1.1.1q    |           x86_64 arm64           |  包含   |        >= iOS 9.0         |
 |     2.2.4      |    1.1.1l    | x86_64 arm64 arm64e armv7 armv7s |  包含   |        >= iOS 8.0         |
 
@@ -37,17 +37,22 @@ GMOpenSSL 支持 SwiftPM，在工程中使用，点击 `File` -> `Swift Packages
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muzipiao/GMOpenSSL.git", from: "3.1.0")
+    .package(url: "https://github.com/muzipiao/GMOpenSSL.git", from: "3.1.1")
 ],
 ```
 
 ## 自定义编译 OpenSSL
 
-如果编译的静态库不能满足需求，可以自行运行脚本编译。工程目录下有一个名称为 OpenSSL_BUILD 的文件夹，依次执行 cd 切换到当前目录下，然后执行`make`即可，待执行完毕，即可看到编译完成的 `OpenSSL_BUILD/Frameworks/OpenSSL.xcframwork`。静态库在对应平台的 lib 文件夹下，如`iphoneos/lib/libcrypto.a`。
+如果编译的静态库不能满足需求，可以自行运行脚本编译。
 
-编译工程依赖[开源项目OpenSSL](https://github.com/krzyzanowskim/OpenSSL)，由于此项目未暴露国密头文件，本目录与原项目有小量改动；主要改动为将 OpenSSL 源码 include/crypto/ 路径下的 sm2.h、sm3.h，sm4.h 都拷贝至项目。
+1. 终端执行命令`git clone https://github.com/muzipiao/GMOpenSSL.git`下载项目至本地；
+2. 打开项目的`GMOpenSSL/OpenSSL_BUILD/OpenSSL.xcodeproj`工程，根据需要修改配置静态库；
+3. 切换到`OpenSSL_BUILD`的文件夹，执行命令`cd GMOpenSSL/OpenSSL_BUILD && make`；
+4. 执行完毕，可看到编译完成的 `OpenSSL_BUILD/Frameworks/OpenSSL.xcframwork`文件。
 
-**主要步骤：**
+编译工程依赖[开源项目OpenSSL](https://github.com/krzyzanowskim/OpenSSL)，由于它未暴露国密头文件，本目录与原项目有小量改动；主要改动为将 OpenSSL 源码 include/crypto/ 路径下的 sm2.h、sm3.h，sm4.h 都拷贝至项目。
+
+**修改原理讲解：**
 
 1. 将`OpenSSL_BUILD/gmheaders`文件夹下头文件夹拖至项目，并设置头文件依赖为**public**；
 2. 在`OpenSSL_BUILD/support`目录下的`OpenSSL.h`中添加下方导入，然后执行`make`编译即可；
