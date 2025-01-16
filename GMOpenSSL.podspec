@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GMOpenSSL'
-  s.version          = '3.1.0'
+  s.version          = '3.1.1'
   s.summary          = 'Build OpenSSL for iOS and OS X，OpenSSL version 1.1.1w。'
 
   s.description      = <<-DESC
