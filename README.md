@@ -37,7 +37,7 @@ GMOpenSSL 支持 SwiftPM，在工程中使用，点击 `File` -> `Swift Packages
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muzipiao/GMOpenSSL.git", from: "3.1.1")
+    .package(url: "https://github.com/muzipiao/GMOpenSSL.git", from: "3.1.2")
 ],
 ```
 
